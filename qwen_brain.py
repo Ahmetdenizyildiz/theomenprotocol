@@ -95,11 +95,10 @@ def analyze_with_qwen(github_data, dao_data):
         print(f"[QWEN] Error occurred: {e}")
         return None
 
-def analyze_news_with_qwen(news_text, image_b64=None):
+def analyze_news_with_qwen(news_text):
     """
-    Analyzes the Telegram news or image forwarded by the user, determines if it 
-    affects any project globally, and finds the direction of the impact.
-    If there is an image, it uses Qwen Vision (Multimodal).
+    Analyzes the Telegram news, links, or RSS feed items forwarded by the user or the automated News Thief.
+    Determines if it affects any project globally, and finds the direction of the impact.
     """
     print("[QWEN] Performing Universal News Analysis (Unlimited Sniper Mode)...")
     
@@ -116,11 +115,9 @@ def analyze_news_with_qwen(news_text, image_b64=None):
     
     system_prompt = (
         "You are a Master Crypto Sniper and a Top Tier Global Macroeconomist. "
-        "The user will send you breaking market news, war news, central bank (FED) decisions, global financial events, OR crypto charts/images. "
-        "Your task: Analyze how this news or image will affect the crypto market. "
+        "The user or the automated system will send you breaking market news, war news, central bank (FED) decisions, global financial events, or live RSS feeds. "
+        "Your task: Analyze how this news will affect the crypto market. "
         "If the news is a macroeconomic or geopolitical event, predict where the capital will flow and determine the most logical crypto asset accordingly. "
-        "MULTIMODAL RULES: If the user provides an image, look for coin tickers (e.g., BTC, ETH) inside the image. "
-        "If they provide text along with the image, use the text as context/instructions to interpret the image. NEVER say 'coin not found' if you can read it from the chart! "
         "While doing this, specify very clearly which coin to choose and which direction (BULLISH/BEARISH).\n\n"
         f"The current Global Crypto Market Sentiment (Fear & Greed Index) is: {fng}. You must consider this general state of fear or greed in your analysis.\n\n"
         "IMPORTANT - IMPACT SCORE RULES (Be Extremely Ruthless and Realistic):\n"
@@ -134,10 +131,7 @@ def analyze_news_with_qwen(news_text, image_b64=None):
         '{"affected_symbol": "Most logical trade symbol (e.g., PAXGUSDT, BTCUSDT etc.)", "project_name": "Project or Coin Name", "decision": "BULLISH" | "BEARISH" | "NEUTRAL", "impact_score": 1-10, "confidence_score": 0-100, "macro_analysis": "Deep macroeconomic interpretation about the impact of global events on crypto and markets", "reason": "Clear reason for trade recommendation", "short_term": "Short-term expectation", "medium_term": "Medium-term expectation", "long_term": "Long-term expectation", "playbook_strategy": {"market_condition": "Compatible market scenario", "trigger": "Trade Entry trigger", "risk_management": "Capital/Risk management", "exit_conditions": "Stop-Loss and Take-Profit targets"}}'
     )
     
-    # Bitget Hackathon API sunucusu Vision modellerini (qwen-vl-plus) 404 hatası ile reddediyor.
-    # Ayrıca qwen3.6-plus modeline image_url gönderildiğinde timeout/boş yanıt dönüyor.
-    # Bu yüzden sadece metni analiz edebiliriz.
-    text_prompt = f"Görsel Açıklaması / Kullanıcı Talimatı:\n{news_text}\n\nLütfen bu metin/link içeriğine göre analizi yap."
+    text_prompt = f"Gelen Canlı Haber / Metin:\n{news_text}\n\nLütfen bu metin/link içeriğine göre piyasa analizini yap."
     user_content = text_prompt
 
     try:

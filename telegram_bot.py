@@ -19,7 +19,8 @@ import re
 from pypdf import PdfReader
 from io import BytesIO
 from http_utils import fetch_url_text
-
+from market_trends import get_trending_coins
+from news_thief import start_thief_thread
 def process_text_for_urls(text):
     if not text: return text
     url_pattern = re.compile(r'https?://\S+')
@@ -158,21 +159,23 @@ def handle_document_sniper(message):
     except Exception as e:
         bot.send_message(message.chat.id, f"Document analysis failed: {e}")
 
-@bot.message_handler(content_types=['photo'])
-def handle_photo_sniper(message):
-    bot.reply_to(message, "📸 *Vision Sniper Active!* Reading image and extracting links if any...", parse_mode="Markdown")
-    try:
-        file_info = bot.get_file(message.photo[-1].file_id)
-        downloaded_file = bot.download_file(file_info.file_path)
-        b64_image = base64.b64encode(downloaded_file).decode('utf-8')
-        
-        caption = message.caption if message.caption else ""
-        enriched_caption = process_text_for_urls(caption)
-        
-        result = analyze_news_with_qwen(enriched_caption, image_b64=b64_image)
-        process_sniper_result(message, result)
-    except Exception as e:
-        bot.reply_to(message, f"Image analysis error: {e}")
+thief_started = False
+
+@bot.message_handler(commands=['start_thief'])
+def handle_start_thief(message):
+    global thief_started
+    if not thief_started:
+        start_thief_thread(bot, message.chat.id)
+        thief_started = True
+        bot.reply_to(message, "🥷 *Haber Hırsızı Aktif!* Artık dünya çapındaki haber sitelerini gizlice dinleyecek ve büyük bir fırsat (Etki >= 7) bulduğunda sana otomatik sinyal çakacak!", parse_mode="Markdown")
+    else:
+        bot.reply_to(message, "⚠️ Hırsız zaten arka planda çalışıyor.")
+
+@bot.message_handler(commands=['trends'])
+def handle_trends(message):
+    bot.reply_to(message, "🔍 CoinGecko üzerinden piyasanın gizli trendlerini kopyalıyorum...", parse_mode="Markdown")
+    trends_text = get_trending_coins()
+    bot.reply_to(message, trends_text, parse_mode="Markdown")
 
 @bot.message_handler(content_types=['voice', 'audio'])
 def handle_voice_sniper(message):
