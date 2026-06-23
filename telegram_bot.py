@@ -217,8 +217,19 @@ def handle_sniper_news(message):
         bot.send_message(message.chat.id, f"Sniper error: {e}")
 
 def process_sniper_result(message, result):
-    if not result or not result.get("affected_symbol"):
-        bot.send_message(message.chat.id, "🤷 Qwen could not detect any significant crypto asset or impact from this data.")
+    if not result:
+        bot.send_message(message.chat.id, "🤷 ❌ [HATA MOTORU] Qwen'den hiçbir yanıt alınamadı (Boş).")
+        return
+        
+    if "error" in result:
+        error_msg = f"🚨 *[SİSTEM HATA MOTORU]*\n\n*Hata Türü:* {result['error']}\n*Detay:* {result['details']}"
+        if "raw" in result:
+            error_msg += f"\n\n*Qwen Ham Yanıtı (JSON Bozuk):*\n`{result['raw'][:500]}`"
+        bot.send_message(message.chat.id, error_msg, parse_mode="Markdown")
+        return
+
+    if not result.get("affected_symbol"):
+        bot.send_message(message.chat.id, "🤷 Qwen metni okudu ancak belirgin bir coin (affected_symbol) çıkaramadı.")
         return
         
     symbol = result["affected_symbol"]

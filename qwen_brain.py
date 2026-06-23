@@ -152,10 +152,23 @@ def analyze_news_with_qwen(news_text, image_b64=None):
             ],
             response_format={"type": "json_object"}
         )
-        return json.loads(completion.choices[0].message.content)
+        raw_content = completion.choices[0].message.content
+        if raw_content:
+            raw_content = raw_content.strip()
+            if raw_content.startswith("```json"):
+                raw_content = raw_content[7:]
+            if raw_content.endswith("```"):
+                raw_content = raw_content[:-3]
+            raw_content = raw_content.strip()
+            
+        try:
+            return json.loads(raw_content)
+        except Exception as json_e:
+            return {"error": "JSON_DECODE_ERROR", "details": str(json_e), "raw": raw_content}
+            
     except Exception as e:
         print(f"[QWEN] News Analysis error: {e}")
-        return None
+        return {"error": "API_ERROR", "details": str(e)}
 
 def analyze_document_with_qwen(doc_text):
     """
