@@ -134,20 +134,15 @@ def analyze_news_with_qwen(news_text, image_b64=None):
         '{"affected_symbol": "Most logical trade symbol (e.g., PAXGUSDT, BTCUSDT etc.)", "project_name": "Project or Coin Name", "decision": "BULLISH" | "BEARISH" | "NEUTRAL", "impact_score": 1-10, "confidence_score": 0-100, "macro_analysis": "Deep macroeconomic interpretation about the impact of global events on crypto and markets", "reason": "Clear reason for trade recommendation", "short_term": "Short-term expectation", "medium_term": "Medium-term expectation", "long_term": "Long-term expectation", "playbook_strategy": {"market_condition": "Compatible market scenario", "trigger": "Trade Entry trigger", "risk_management": "Capital/Risk management", "exit_conditions": "Stop-Loss and Take-Profit targets"}}'
     )
     
-    if image_b64:
-        text_prompt = f"Context/Instruction from user:\n{news_text}\n\nPlease analyze this image." if news_text else "Please analyze this crypto chart or image, identify the coin, and provide a trading playbook."
-        user_content = [
-            {"type": "text", "text": text_prompt},
-            {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{image_b64}"}}
-        ]
-    else:
-        user_content = f"BREAKING NEWS:\n{news_text}"
+    # Bitget Hackathon API sunucusu Vision modellerini (qwen-vl-plus) 404 hatası ile reddediyor.
+    # Ayrıca qwen3.6-plus modeline image_url gönderildiğinde timeout/boş yanıt dönüyor.
+    # Bu yüzden sadece metni analiz edebiliriz.
+    text_prompt = f"Görsel Açıklaması / Kullanıcı Talimatı:\n{news_text}\n\nLütfen bu metin/link içeriğine göre analizi yap."
+    user_content = text_prompt
 
     try:
-        model_name = "qwen-vl-plus" if image_b64 else "qwen3.6-plus"
-        
         completion = client.chat.completions.create(
-            model=model_name,
+            model="qwen3.6-plus",
             messages=[
                 {'role': 'system', 'content': system_prompt},
                 {'role': 'user', 'content': user_content}
