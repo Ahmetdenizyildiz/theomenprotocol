@@ -155,6 +155,8 @@ def handle_document_sniper(message):
         result = analyze_document_with_qwen(doc_text)
         process_sniper_result(message, result)
         
+    except Exception as e:
+        bot.send_message(message.chat.id, f"Document analysis failed: {e}")
 @bot.message_handler(commands=['github'])
 def handle_github(message):
     try:
