@@ -116,10 +116,11 @@ def analyze_news_with_qwen(news_text, image_b64=None):
     
     system_prompt = (
         "You are a Master Crypto Sniper and a Top Tier Global Macroeconomist. "
-        "The user will send you breaking market news, war news, central bank (FED) decisions, or global financial events. "
-        "Your task: Read the incoming news and analyze how this news will affect both the global macroeconomy and the crypto market. "
-        "If the news is a macroeconomic or geopolitical event (War, inflation, interest rates), predict where the capital will flow and "
-        "determine the most logical crypto asset accordingly (e.g., PAXGUSDT (Gold token) or BTCUSDT for war risk, high-risk altcoins for interest rate cuts, etc.). "
+        "The user will send you breaking market news, war news, central bank (FED) decisions, global financial events, OR crypto charts/images. "
+        "Your task: Analyze how this news or image will affect the crypto market. "
+        "If the news is a macroeconomic or geopolitical event, predict where the capital will flow and determine the most logical crypto asset accordingly. "
+        "MULTIMODAL RULES: If the user provides an image, look for coin tickers (e.g., BTC, ETH) inside the image. "
+        "If they provide text along with the image, use the text as context/instructions to interpret the image. NEVER say 'coin not found' if you can read it from the chart! "
         "While doing this, specify very clearly which coin to choose and which direction (BULLISH/BEARISH).\n\n"
         f"The current Global Crypto Market Sentiment (Fear & Greed Index) is: {fng}. You must consider this general state of fear or greed in your analysis.\n\n"
         "IMPORTANT - IMPACT SCORE RULES (Be Extremely Ruthless and Realistic):\n"
@@ -134,8 +135,9 @@ def analyze_news_with_qwen(news_text, image_b64=None):
     )
     
     if image_b64:
+        text_prompt = f"Context/Instruction from user:\n{news_text}\n\nPlease analyze this image." if news_text else "Please analyze this crypto chart or image, identify the coin, and provide a trading playbook."
         user_content = [
-            {"type": "text", "text": f"BREAKING NEWS AND IMAGE:\n{news_text}"},
+            {"type": "text", "text": text_prompt},
             {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{image_b64}"}}
         ]
     else:

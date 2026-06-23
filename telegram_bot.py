@@ -18,7 +18,23 @@ from pydub import AudioSegment
 import re
 from pypdf import PdfReader
 from io import BytesIO
+from http_utils import fetch_url_text
 
+def process_text_for_urls(text):
+    if not text: return text
+    url_pattern = re.compile(r'https?://\S+')
+    urls = url_pattern.findall(text)
+    if not urls: return text
+    
+    extracted_texts = []
+    for url in urls:
+        fetched = fetch_url_text(url)
+        if fetched:
+            extracted_texts.append(f"--- CONTENT FROM {url} ---\n{fetched}\n------------------------")
+    
+    if extracted_texts:
+        return text + "\n\n" + "\n".join(extracted_texts)
+    return text
 def escape_markdown(text):
     if not text:
         return "-"
@@ -144,14 +160,16 @@ def handle_document_sniper(message):
 
 @bot.message_handler(content_types=['photo'])
 def handle_photo_sniper(message):
-    bot.reply_to(message, "📸 *Vision Sniper Active!* Reading and analyzing the image...", parse_mode="Markdown")
+    bot.reply_to(message, "📸 *Vision Sniper Active!* Reading image and extracting links if any...", parse_mode="Markdown")
     try:
         file_info = bot.get_file(message.photo[-1].file_id)
         downloaded_file = bot.download_file(file_info.file_path)
         b64_image = base64.b64encode(downloaded_file).decode('utf-8')
         
         caption = message.caption if message.caption else ""
-        result = analyze_news_with_qwen(caption, image_b64=b64_image)
+        enriched_caption = process_text_for_urls(caption)
+        
+        result = analyze_news_with_qwen(enriched_caption, image_b64=b64_image)
         process_sniper_result(message, result)
     except Exception as e:
         bot.reply_to(message, f"Image analysis error: {e}")
@@ -189,10 +207,11 @@ def handle_voice_sniper(message):
 def handle_sniper_news(message):
     # If not a command, treat as News/Text, send to Qwen Sniper
     if message.text.startswith('/'): return
-    bot.reply_to(message, "🎯 *Sniper Mode Active!* Sending news to Qwen for analysis...", parse_mode="Markdown")
+    bot.reply_to(message, "🎯 *Sniper Mode Active!* Reading links and sending to Qwen for analysis...", parse_mode="Markdown")
     
     try:
-        result = analyze_news_with_qwen(message.text)
+        enriched_text = process_text_for_urls(message.text)
+        result = analyze_news_with_qwen(enriched_text)
         process_sniper_result(message, result)
     except Exception as e:
         bot.send_message(message.chat.id, f"Sniper error: {e}")

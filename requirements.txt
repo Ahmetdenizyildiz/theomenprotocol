@@ -6,3 +6,4 @@ pyTelegramBotAPI
 SpeechRecognition
 pydub
 pypdf
+beautifulsoup4

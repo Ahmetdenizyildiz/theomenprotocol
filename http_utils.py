@@ -29,3 +29,29 @@ def get_session():
         _session.mount("http://", adapter)
         
     return _session
+
+def fetch_url_text(url):
+    """
+    Verilen URL'nin içeriğini BeautifulSoup ile kazır.
+    """
+    from bs4 import BeautifulSoup
+    try:
+        session = get_session()
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+        }
+        response = session.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
+        
+        soup = BeautifulSoup(response.text, "html.parser")
+        
+        # Gereksiz etiketleri kaldır (script, style vb.)
+        for script in soup(["script", "style", "nav", "footer", "header"]):
+            script.extract()
+            
+        text = soup.get_text(separator=' ', strip=True)
+        # Sadece ilk 8000 karakteri al ki Qwen limiti aşılmasın
+        return text[:8000]
+    except Exception as e:
+        print(f"[HTTP Utils] fetch_url_text error for {url}: {e}")
+        return None
