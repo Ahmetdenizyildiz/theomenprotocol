@@ -1,0 +1,8 @@
+requests
+python-dotenv
+openai
+ccxt
+pyTelegramBotAPI
+SpeechRecognition
+pydub
+pypdf

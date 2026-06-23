@@ -1,0 +1,22 @@
+[
+  { "name": "Uniswap", "github_owner": "Uniswap", "github_repo": "v4-core", "dao_space": "uniswap.eth", "trade_symbol": "UNIUSDT" },
+  { "name": "Aave", "github_owner": "aave", "github_repo": "aave-v3-core", "dao_space": "aave.eth", "trade_symbol": "AAVEUSDT" },
+  { "name": "Lido", "github_owner": "lidofinance", "github_repo": "lido-dao", "dao_space": "lido-snapshot.eth", "trade_symbol": "LDOUSDT" },
+  { "name": "MakerDAO", "github_owner": "makerdao", "github_repo": "dss", "dao_space": "makerdao.eth", "trade_symbol": "MKRUSDT" },
+  { "name": "Curve", "github_owner": "curvefi", "github_repo": "curve-contract", "dao_space": "curve.eth", "trade_symbol": "CRVUSDT" },
+  { "name": "Compound", "github_owner": "compound-finance", "github_repo": "comet", "dao_space": "compound.eth", "trade_symbol": "COMPUSDT" },
+  { "name": "dYdX", "github_owner": "dydxprotocol", "github_repo": "v4-chain", "dao_space": "dydxgov.eth", "trade_symbol": "DYDXUSDT" },
+  { "name": "Arbitrum", "github_owner": "OffchainLabs", "github_repo": "nitro", "dao_space": "arbitrumfoundation.eth", "trade_symbol": "ARBUSDT" },
+  { "name": "Optimism", "github_owner": "ethereum-optimism", "github_repo": "optimism", "dao_space": "opcollective.eth", "trade_symbol": "OPUSDT" },
+  { "name": "EigenLayer", "github_owner": "Layr-Labs", "github_repo": "eigenlayer-contracts", "dao_space": "eigenlayer.eth", "trade_symbol": "EIGENUSDT" },
+  { "name": "Pendle", "github_owner": "pendle-finance", "github_repo": "pendle-core-v2-public", "dao_space": "pendle.eth", "trade_symbol": "PENDLEUSDT" },
+  { "name": "Chainlink", "github_owner": "smartcontractkit", "github_repo": "chainlink", "dao_space": "chainlink.eth", "trade_symbol": "LINKUSDT" },
+  { "name": "LayerZero", "github_owner": "LayerZero-Labs", "github_repo": "LayerZero-v2", "dao_space": "layerzero.eth", "trade_symbol": "ZROUSDT" },
+  { "name": "Celestia", "github_owner": "celestiaorg", "github_repo": "celestia-app", "dao_space": "celestia.eth", "trade_symbol": "TIAUSDT" },
+  { "name": "Starknet", "github_owner": "starkware-libs", "github_repo": "cairo", "dao_space": "starknet.eth", "trade_symbol": "STRKUSDT" },
+  { "name": "GMX", "github_owner": "gmx-io", "github_repo": "gmx-synthetics", "dao_space": "gmx.eth", "trade_symbol": "GMXUSDT" },
+  { "name": "Frax", "github_owner": "FraxFinance", "github_repo": "frax-solidity", "dao_space": "frax.finance.eth", "trade_symbol": "FXSUSDT" },
+  { "name": "Morpho", "github_owner": "morpho-org", "github_repo": "morpho-blue", "dao_space": "morpho.eth", "trade_symbol": "MORPHOUSDT" },
+  { "name": "Balancer", "github_owner": "balancer", "github_repo": "balancer-v2-monorepo", "dao_space": "balancer.eth", "trade_symbol": "BALUSDT" },
+  { "name": "0x", "github_owner": "0xProject", "github_repo": "protocol", "dao_space": "0xproject.eth", "trade_symbol": "ZRXUSDT" }
+]

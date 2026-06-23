@@ -1,0 +1,158 @@
+Title: Live Content
+
+Description: Fetched live
+
+Source: https://www.bitget.com/support/articles/12560603885951
+
+---
+GetAgent Playbook Launches: What Is Playbook? | Bitget Support Center
+Bitget App
+Trade smarter
+Buy crypto
+Markets
+Trade
+Futures
+Earn
+Square
+More
+Bitget
+/
+Help Center
+/
+Latest news
+/
+Bitget news
+/
+GetAgent Playbook Launches: What Is Playbook?
+/
+Latest news
+Latest news
+Announcements
+Bitget news
+New listings
+Product updates
+Competitions and promotions
+Delisting information
+Security
+Institutional Services
+API trading
+Fiat
+Maintenance or system updates
+GetAgent Playbook Launches: What Is Playbook?
+2026-06-17 03:02
+1
+10858
+Bitget GetAgent has officially launched Playbook, marking an important upgrade as GetAgent evolves from an AI-powered trading Q&A assistant into an AI strategy entry point.
+In simple terms, Playbook is a pre-structured trading “execution script.” It breaks down a trading idea into a clearer framework in advance: what market conditions it is designed for, what signals it monitors, when it should be triggered, how risk is managed, and under what conditions it should stop.
+In the past, when users wanted to use AI for trading assistance, they had to describe their trading ideas themselves, add entry conditions, exit conditions, stop-loss rules, position sizing, and suitable market scenarios, then revise the prompt repeatedly before getting a relatively complete strategy framework.
+For example, if a user wants to capture a potential Bitcoin breakout trend, they first need to think through several questions: What breakout level should be considered valid? Does the breakout need to be confirmed by trading volume? How should the stop-loss be set after entry? What if it turns out to be a false breakout? Should the position be closed if the market suddenly reverses? If users have to organize all of these conditions on the spot by themselves, the barrier can be quite high. With Playbook, these conditions are placed into a more complete strategy structure, allowing users to see more clearly how the strategy is designed to work.
+The first benefit of Playbook is that it lowers the barrier to understanding. Users do not need to start from a blank prompt, nor do they need to design a complete strategy from scratch. Instead, they can first review existing strategy logic. It is more like giving users a trading guide first, helping them understand what problem the strategy is designed to solve and what kind of market environment it is suitable for.
+The second benefit is that it reduces the need to repeatedly “train” or correct AI. Many AI tools can answer questions, but users often have to keep adding follow-up instructions: “That’s not what I meant,” “Add a stop-loss,” “Consider position sizing,” or “Can this condition actually be executed?” Playbook structures strategy logic, trigger conditions, and risk parameters in advance, so users are not just reading a generic analysis, but reviewing a strategy framework that is closer to an actual trading process.
+The third benefit is that it makes trading ideas easier to turn into strategies. Many users already have trading ideas, such as trading trend breakouts, capturing mean reversion in ranging markets, monitoring abnormal market movements, or tracking signals for specific asset categories. In the past, these ideas might have remained only in the user’s mind and been difficult to turn into complete rules. The value of Playbook is that it helps break these ideas down into clearer conditions and processes.
+Of course, Playbook is not a guaranteed-profit tool or an automatic money-making button. Every strategy has market environments where it may or may not be suitable, and past strategy performance does not represent future results. Its real value is not in promising returns, but in helping users better understand strategies, choose strategies, and manage risk.
+Join Bitget, the world's largest Universal Exchange (UEX)
+Sign up on Bitget now >>>
+Follow us on X >>>
+Join our Community >>>
+Share
+Related articles
+Alert on phishing scam prevention
+Bitget to launch BTC/USDT and ETH/USDT spot trading zero transaction fee promotion
+#BitgetTurns5: Join Us as We Celebrate Bitget's Fifth Anniversary
+Bitget has updated the Proof of Reserves for September 2023
+Announcement: Bitget 5th anniversary celebration — win rewards from Collect2Earn!
+Announcement regarding the optimization of position tiers for BCHUSDT and PEPEUSDT on Bitget
+Bitget updates identity verification
+Announcement on risk control terms adjustments
+Announcement on The Delisting of TokenFi (TOKEN) and Buyback Plan
+Regarding the Memecoin Statement
+About Bitget
+About Bitget
+Contact us
+Community
+Careers
+Bitget Academy
+Bitget Blog
+Bitget Token (BGB)
+Announcement Center
+Proof of Reserves
+Protection Fund
+Bitget UEX
+Partner links
+LALIGA partnership
+MotoGP partnership
+Blockchain4Youth
+Blockchain4Her
+Sitemap
+Products
+Spot
+Futures
+TradFi
+Onchain
+Stocks
+Convert & Block Trade
+Margin
+Earn
+Spot copy trading
+Futures copy trading
+Bot copy trading
+Bots
+APIs
+TraderPro
+Web3 wallet
+Fiat OTC
+Bitget Swap
+Telegram Apps Center
+Discord Apps Center
+Airdrop library
+Stock markets
+Gold price today
+Silver price today
+Buy crypto
+Buy crypto
+Buy Bitcoin
+Buy ETH
+Buy DOGE
+Buy XRP
+Buy BGB
+Buy SHIB
+Crypto prices
+Bitcoin price
+Ethereum price
+Solana price chart
+Calculator
+Bitcoin ETF
+Crypto wiki
+XRP price
+Pi Network price
+ADA price
+Solana price
+Trump coin price
+Dogecoin price
+Support
+Submit feedback
+Help Center
+Verify official channels
+Anti-scam hub
+Listing application
+VIP services
+Affiliate program
+Institutional services
+Asset custody
+Download data
+Promotions
+Referral program
+Fee schedule
+Tax filing API
+Legal
+Service Agreement
+Law enforcement request
+Regulatory request
+Compliance
+Regulatory license
+AML/CFT policies
+Privacy policy
+Terms of Service
+Risk disclosure
+Scan to download
+© 2026 Bitget

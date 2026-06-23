@@ -1,0 +1,40 @@
+{
+    "balance_usdt": 9300.0,
+    "positions": [
+        {
+            "symbol": "LDO/USDT",
+            "buy_price": 0.2839,
+            "amount": 352.23670306445933,
+            "usdt_invested": 100.0,
+            "timestamp": "2026-06-18T14:06:34.230900"
+        },
+        {
+            "symbol": "LDO/USDT",
+            "buy_price": 0.2803,
+            "amount": 356.76061362825544,
+            "usdt_invested": 100,
+            "timestamp": "2026-06-18T14:53:09.291793"
+        },
+        {
+            "symbol": "TIAUSDT",
+            "buy_price": 0.3893,
+            "amount": 256.8713074749551,
+            "usdt_invested": 100,
+            "timestamp": "2026-06-18T17:43:45.948819"
+        },
+        {
+            "symbol": "BTCUSDT",
+            "buy_price": 63627.57,
+            "amount": 0.0031432915008383945,
+            "usdt_invested": 200.0,
+            "timestamp": "2026-06-18T18:05:29.818264"
+        },
+        {
+            "symbol": "PAXGUSDT",
+            "buy_price": 4156.92,
+            "amount": 0.048112544864948086,
+            "usdt_invested": 200.0,
+            "timestamp": "2026-06-19T13:03:25.629187"
+        }
+    ]
+}

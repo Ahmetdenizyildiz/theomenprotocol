@@ -1,0 +1,574 @@
+Title: Live Content
+
+Description: Fetched live
+
+Source: https://bitget-ai.gitbook.io/hackathon
+
+---
+Base Camp * Hackathon S1 EN | Bitget_AI Docs
+Bitget_AI Docs
+⌘
+Ctrl
+k
+Bitget_AI Docs
+Builder OS * Hackathon S1 EN
+Base Camp * Hackathon S1 EN
+Powered by GitBook
+On this page
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+Copy
+On this page
+Base Camp * Hackathon S1 EN
+In 2026, the first generation of truly autonomous trading Agents is being written. It's your turn now.
+— Bitget AI Team
+1. The Event
+Today we stand at the next threshold:
+Agentic Trading
+.
+An AI Agent is the first entity that can read news, sentiment, on-chain signals, and macro data — and act autonomously without predefined rules.  A complete loop, no human in the middle. Traditional quant can't do this.
+Bitget AI Base Camp Hackathon S1
+is the world's first dedicated competition for AI × Crypto Builders, and the starting point of Bitget's long-term developer program.
+Item
+Details
+Duration
+May 27 – June 30, 2026
+Format
+Global, online
+Total Prize Pool
+50,000 USDT
+Organizer
+Bitget
+Strategic Sponsor
+Alibaba Qwen
+Media & Ecosystem
+Foresight Ventures / Foresight News
+Prizes
+Prize
+Amount
+Track
+1st Place
+6,600 USDT
+All tracks, judged together
+2nd Place
+1,500 USDT * 3
+1 per track
+3rd Place
+800 USDT * 3
+1 per track
+Community Impact Award
+500 USDT * 3
+1 per track
+Participation Award
++50 USDT / team
+（Qualifying teams）Submit Demo + qualifying post
+Beyond cash prizes: official channel exposure, ecosystem media coverage, potential incubation and investor introductions, early access to Bitget AI products, and membership in the Bitget AI Builders long-term developer community.
+2. How to Participate
+Timeline (UTC+8)
+Date
+Milestone
+May 27, 00:00
+Registration opens, development starts
+Jun 14, 24:00
+Registration closes (first 500 teams get Qwen token credits)
+Jun 15, 00:00
+Submission window opens
+Jun 25, 24:00
+Submission deadline
+Jun 25–29
+Judging
+Jun 30
+Awards — winners notified by email
+What You Need to Do
+1
+Register (May 27, UTC+8)
+Fill out the form on the
+official registration page
+using your Bitget account (linked email required). Solo or team entries welcome; teams up to 5 members.
+Join the
+official Telegram community
+after registering. First 500 qualifying teams receive Qwen token credits within 24h; join the community to claim MuleRun Token credits (see Chapter 4).
+2
+Pick a track and start building (immediately)
+Read Chapter 3 to pick your direction, then connect to Bitget Agent Hub or Bitget Playbook and start building (see Chapter 4).
+Demo must be real and runnable — no concept-only presentations. No real capital required; sim trading and backtest records are accepted.
+3
+Post (throughout development)
+Repost the Bitget
+official interaction post
+and publish your own content, tagged
+#BitgetHackathon
+and @ the Bitget AI official account.
+4
+Submit (Jun 15, 00:00 – Jun 25, 24:00, UTC+8)
+Bitget shares the submission link via official social media, community, and registration email.
+Fill in the track form and upload your materials; include links to your repost of the
+official interaction post
+to qualify for the Community Impact Award. Submission requirements by track are in Chapter 3.
+5
+Results (Jun 30)
+Judges score independently after submission closes. Winners notified by registration email; results published publicly.
+3. Tracks, Submission & Judging
+Track Overview
+Track
+Come here if…
+What you can build
+🟦
+Trading Agent
+You want to run strategies automatically or build tools for Vibe Trading
+Natural language-driven contract trading Agent
+BTC adaptive trend + mean-reversion strategy
+Meme coin on-chain signal copy bot
+🟩
+Trading Infra
+You want to build better infrastructure or data products for Agents
+Paper Trading sandbox
+Agent monitoring dashboard + risk scoring
+On-chain data dashboard
+Natural language strategy compiler
+🟧
+Stock AI Trading
+Want to use AI to trade tokenized US stocks, or solve a real problem around US stock trading
+Macro/sentiment Agent for tokenized US assets
+Backtest and deploy strategies on US stock historical data
+Agent that reads Fed signals and auto-rebalances positions
+Submission Requirements
+Submission window:
+June 15, 2026 0:00 – June 25, 2026 24:00 (UTC+8)
+📢
+Submission link:
+https://forms.gle/CEGB6fRtuobD3bCj8
+General Rules (All Tracks)
+All participants must meet the following baseline requirements before submitting:
+UID must match registration
+: The Bitget UID you submit must match the one used at registration — used for eligibility verification
+All links must be publicly accessible
+: No login required to view any submitted link, including Demo pages, GitHub repos, MuleRun publish pages, GetAgent Studio strategy links, etc. If your Demo requires a login, you must also submit a demo video
+Thesis must be clearly stated
+: Your project description must explain the core logic behind your strategy or tool — a feature list or pure concept pitch is not accepted
+At least one verifiable usage record
+: See per-track checklists below. Required for all tracks except Open Innovation
+⚠️
+Baseline threshold
+: Submissions that fail to meet any of the above will be disqualified and will not enter judging.
+Per-Track Submission Checklist
+🟦 Track 1 · Trading Agent
+Build an AI Agent that autonomously perceives market conditions, makes decisions, executes trades, and manages risk in the crypto market. Any instrument is valid — perpetuals, spot, on-chain protocols, prediction markets, etc.
+Material
+Requirement
+Notes
+Project description
+Required
+Follow the four-part structure above
+GitHub repo or MuleRun / GetAgent Studio publish link
+Required
+GitHub must be public with a complete README; MuleRun / Studio links must be accessible without login
+Live trading record or paper trading log
+Required (preferred)
+Must include: timestamp, trading pair, direction, price, quantity, account balance change; recommended to upload to GitHub and submit the link
+Backtest report
+Optional, supplementary
+Must include the code or notebook used to generate it; screenshots alone are not accepted; judges reserve the right to reproduce results
+Demo video
+Optional; required if Demo needs login
+Recommended: post to Twitter as a public tweet and submit the link; YouTube and other public video links also accepted; max 3 minutes
+🟩 Track 2 · Trading Infra
+Build infrastructure that helps Agents perform better or makes trading more efficient for traders. Scope includes but is not limited to: tools or frameworks for Agents, products for traders (monitoring dashboards, visualization tools, etc.), and strategy evaluation and benchmarking systems.
+Material
+Requirement
+Notes
+Project description
+Required
+Follow the four-part structure above
+GitHub repo
+Required
+Must be public; README must include: installation steps, integration instructions, usage examples; another developer should be able to run it independently using the README
+Deployment link
+Optional
+If an online version is available, include the deployment URL
+Verifiable usage record
+Required
+Submit any one of the following: API call log (with timestamps and call volume) / real user usage records / sample input + output files (reproducible by judges) / description or link showing another developer has integrated it
+Demo video
+Optional; required if Demo needs login
+Recommended: post to Twitter as a public tweet and submit the link; YouTube and other public video links also accepted; max 3 minutes; recommended to show the full flow from installation to core functionality
+🟧 Track 3 · US Stock AI Trading (US stock projects)
+Use AI to participate in US stock asset trading, or solve a real problem around the US stock trading experience. Eligible assets include tokenized US stocks on the Bitget platform, as well as traditional US stocks and ETFs.
+Material
+Requirement
+Notes
+Project description
+Required
+Follow the four-part structure above
+GitHub repo or Demo link
+Required
+GitHub must be public with a README; Demo must be accessible without login
+Live trading record or paper trading log
+Required (preferred)
+Must include: timestamp, asset, direction, price, quantity, account balance change; recommended to upload to GitHub and submit the link
+Backtest report
+Optional, supplementary
+Must include the code or notebook used to generate it; screenshots alone are not accepted
+Demo video
+Optional; required if Demo needs login
+Recommended: post to Twitter as a public tweet and submit the link; YouTube and other public video links also accepted; max 3 minutes
+🟧 Track 3 · US Stock AI Trading (Open Innovation)
+Participants who registered early under the "Open Innovation" track may submit projects unrelated to US stocks, but the project must have a clear connection to crypto trading or AI, and must use the UID from registration.
+Material
+Requirement
+Notes
+Project description
+Required
+Follow the four-part structure above; must describe the connection to crypto trading or AI
+GitHub repo or Demo link
+Required
+GitHub must be public with a README; Demo must be accessible without login
+Evidence of the project running
+Optional; preferred if available
+Any one of the following: Agent output screenshots + raw files / sample input/output / API call log / demo run record / test data files; recommended to upload to GitHub and submit the link
+Demo video
+Optional; required if Demo needs login
+Recommended: post to Twitter as a public tweet and submit the link; YouTube and other public video links also accepted; max 3 minutes
+Community Impact Award (All Tracks, Optional)
+Scored independently from the main judging criteria — has no effect on your technical score.
+奖项
+材料
+说明
+Participation Award
+Engagement tweet link
+Submit a working Demo + a qualifying post (quotethe
+Bitget tweet
+and share  dev log) to be eligible for the Participation Award:   +50 USDT
+Community Impact Award
+Engagement tweet link
+Tag #BitgetHackathon and @Bitget_AI, and quote the
+Bitget tweet
+— top entries win the Community Impact Award (500 USDT × 3)
+Scoring Dimensions
+The projects that impress judges are the ones that genuinely solve a problem and actually run
+Judges evaluate holistically across the following dimensions — no fixed weighting formula.
+Bitget reserves the right of final interpretation.
+Dimension
+What judges look for
+Depth of thesis
+Is the core assumption behind the strategy or tool design sound? Has the builder truly thought through this direction?
+Runnability
+Is the Demo genuinely accessible and runnable? Live trading / paper trading > backtest > pure concept
+Completeness
+Does the MVP work end-to-end? Does the solution match the problem? Honest self-assessment is valued over exaggeration
+Novelty & potential
+Does it do something only AI Agents can do? Is there room for the idea to grow?
+FAQ
+Q: I don't have a deployment environment — is GitHub alone enough?
+Yes, but your README must clearly explain how to run it locally. Judges should be able to get it running without contacting you.
+Q: Can I submit backtest screenshots?
+No. Backtest results must be accompanied by the code or notebook used to generate them. Judges reserve the right to reproduce the results.
+Q: What if my Demo requires a login to access?
+You must also submit a demo video (public Twitter link or YouTube) so judges can see the project running.
+Q: What if my MuleRun / GetAgent Studio link requires a login?
+Same as above — you must also submit a demo video.
+Q: I don't have live or paper trading data — can I submit with only a backtest?
+Yes, but backtest-only submissions are scored lower than projects with actual run records. Backtests must include the code — screenshots alone are not accepted.
+Q: Do Open Innovation projects need to submit a usage record?
+It's optional, but preferred. Accepted formats are flexible: Agent output screenshots, sample input/output, API call logs, demo run records, test data files — any of these work.
+Q: Can I submit an Open Innovation project that has nothing to do with US stocks?
+Yes, but you must clearly describe its connection to crypto trading or AI, and use the UID from your registration.
+Q: Is Part 4 of the project description (your take on AI Trading) required?
+Optional — it won't affect your base score. But if you have genuine hands-on experience and insights, including them helps judges better understand your project.
+4. Hackathon Toolkit
+Bitget Playbook (Crypto & Stock AI Quant Copilot)
+Bitget Playbook is an AI-driven quantitative strategy platform. Describe a trading idea in plain language, AI generates a runnable strategy, backtest on real historical data, review PnL / max drawdown / Sharpe / win rate, then deploy live for 24/7 automated execution.
+Option 1: Via the Bitget Official Website
+1
+Create an Agent & Sub-Account
+Log in the
+Playbook page
+with your registered Bitget UID, Click "Create Agent" and follow the instructions to set up your sub-account and obtain your Playbook API Key
+2
+Use a Coding Agent to Build, Backtest & Publish Your Strategy
+Open Claude Code (or any supported coding agent) and send the following prompt in full:
+3
+View Your Published Playbook
+Once published, your strategy will be visible directly on
+here
+Option 2: Via GetAgent Studio
+1
+Get Whitelist Access
+Join the
+official Telegram community
+and DM the admin with your UID to get whitelist access
+2
+Via GetAgent Studio
+Once approved, you can explore the full Playbook experience at
+here
+Bitget Agent Hub
+(Crypto & Stocks Agent's Trading Arsenal)
+Bitget Agent Hub is a trading tool platform built for AI developers. Three layers, use what you need:
+Module
+What it is
+How it helps
+Tools
+58 trading APIs (spot, futures, account, etc.)
+Your Agent can place orders, check positions, and manage assets without writing any API wrappers
+Skill Hub
+5 analyst-grade perception Skills (macro, sentiment, technicals, on-chain, news)
+Give your Agent market awareness in minutes — just configure and go
+MCP Server
+One-line setup for Claude / Cursor / Codex
+Call all Bitget trading capabilities directly from the AI tools you already use
+Quick install:
+Deploy to specific tools:
+Configure Bitget API Key:
+Log in to bitget.com → Settings → API Management, create a key with Read and/or Trade permissions:
+Connect via MCP Server (Claude Code / Cursor):
+Skill Hub — 5 ready-to-use analyst-grade Skills:
+Skill
+Capability
+macro-analyst
+Macro & cross-asset: Fed policy, BTC vs DXY / Nasdaq / Gold
+market-intel
+On-chain & institutional: ETF flows, whale activity, DeFi TVL
+news-briefing
+News aggregation & narrative synthesis: briefings, keyword search
+sentiment-analyst
+Sentiment & positioning: Fear & Greed, long/short ratios, funding rates
+technical-analysis
+Technical analysis: 23 indicators across 6 categories
+Qwen Token Credits
+First 500 registered teams receive Alibaba Cloud Qwen token credits.
+Item
+Details
+When
+Within 24h of registration, sent to the email linked to your Bitget UID
+Works with
+Cursor, Codex, and other major coding agents (
+Claude Code not supported
+)
+Didn't receive it?
+@ an admin in the
+official Telegram community
+with your UID and registration time
+⚠️ Qwen tokens only work with Alibaba Cloud APIs. They cannot be used with Claude or any non-Alibaba model.
+Qwen Setup Guide
+Setting
+Value
+Base URL
+https://hackathon.bitgetops.com/v1
+Model (recommended)
+qwen3.6-plus
+Optional models
+qwen3.6-flash
+(fast)
+⚠️ Model IDs use hyphens (e.g.
+qwen3.6-plus
+). Do not use
+qwen3.6 max
+(with a space).
+Qwen in Codex
+1
+Codex Step 1: Edit config.toml
+In Codex App: Settings → Config → Open config.toml.
+Add the following at the top (
+model_provider
+may not exist by default):
+2
+Codex Step 2: Set the API Key
+3
+Codex Step 3: Restart Codex App
+Complete Step 2 first, then fully quit Codex (Cmd+Q, not just close the window) and reopen.
+4
+Codex Step 4: Confirm you're using Qwen
+Check the bottom-right corner: should show
+Bitget Qwen
+, not GPT-5.5
+Terminal:
+/Applications/Codex.app/Contents/Resources/codex doctor | grep model
+— expected output includes
+qwen3.6-plus
+Qwen in Cursor
+1
+Cursor Step 1: Open model settings
+Cursor Settings, or
+Cmd+Shift+J
+(macOS) /
+Ctrl+Shift+J
+(Windows), select Models in the left sidebar.
+2
+Cursor Step 2: Enter the API Key &
+Enable Base URL override
+Paste your key into the OpenAI API Key field. Click Verify to confirm.
+Turn on Override OpenAI Base URL and enter (The
+/v1
+suffix is required.)
+3
+Cursor Step 4: Add custom models
+Click
++ Add model
+, enter
+qwen3.6-plus
+, press Enter and ensure it's enabled. For the fast variant, add
+qwen3.6-flash
+.
+4
+Cursor Step 5: Select the model and test
+Open Chat / Agent, select
+qwen3.6-plus
+from the model dropdown, send a test message to confirm it works.
+MuleRun Token Credits
+Join the official Telegram community to claim 2,000 Credits.
+Item
+Details
+How to claim
+Join the
+official Telegram community
+Works with
+MuleRun platform, covers major LLMs
+Limit
+One claim per email
+Claim steps:
+1
+Join the official Telegram community
+Join the
+official Telegram community
+2
+Sign up at mulerun.com
+Sign up at
+mulerun.com
+3
+Claim Credits
+Go to
+credits.mule.page
+, enter code
+0526BITGET
+to claim 2,000 Credits
+⚠️ MuleRun Credits must be used on the MuleRun platform. After building on MuleRun, you can submit your Agent link directly as your hackathon Demo.
+Resources
+Resource
+Link
+Agent Hub GitHub
+BitgetLimited/agent_hub
+Event Landing Page
+bitget.com/zh-CN/activity-hub/hackathon
+Registration
+Register here
+Official Telegram
+Join community
+Official interaction post
+Repost to participate
+Submission link
+https://forms.gle/mGrppbHw6gz5jmot8
+5. FAQ
+Q: Can I participate without trading experience?
+Yes. The
+Bitget Agent Hub GitHub repository
+provides a complete skeleton — just extend it with your own ideas. Bitget Playbook also lets you run a trading strategy end-to-end without writing code.
+No real capital required
+— sim trading and backtest records are accepted.
+Q: Can I participate solo? How does team registration work?
+Absolutely. Solo and team entries are judged equally. Everyone registers as an individual by default — no need to submit teammate information at registration. Final team details will be collected again at the submission stage. Teams can have up to 5 members. Looking for teammates? Post in the official Telegram community.
+Q: What if my registration fails?
+Contact an admin directly in the
+official Telegram community
+.
+Q: How do I use Bitget Agent Hub?
+Three ways, use what fits:
+MCP Server
+: one command to connect Claude Code / Cursor; then call 58 Bitget trading APIs through natural language
+Skill Hub
+: 5 plug-and-play perception modules (macro / on-chain / sentiment / technicals / news) — configure and go
+Direct tool use
+: clone from GitHub for fully custom setups
+Detailed setup in Chapter 4.
+Q: How do I use Bitget Playbook?
+Two manual steps first (create sub-account with your registered UID + contact admin via Telegram to get a Playbook API Key), then paste a single prompt into Claude Code — the Agent handles install → strategy creation → backtest → publish automatically. Detailed steps in Chapter 4.
+Q: How do I claim MuleRun Credits? What if I didn't receive them?
+Join the official Telegram community, sign up on MuleRun, and enter code
+0526BITGET
+at
+credits.mule.page
+to claim 2,000 Credits. One claim per email. If you didn't receive them, DM an admin with your UID.
+Q: How do I claim Qwen token credits? What if I didn't receive them?
+The first 500 registered teams receive an API Key by email within 24h of registration. It works with Cursor and Codex (
+Claude Code not supported
+). If you didn't receive it, @ an admin in the official Telegram community with your UID and registration time.
+Q: The Qwen API Key doesn't work / can't connect to Qwen. What do I do?
+This key routes through a Bitget proxy — it
+cannot connect directly to the official Qwen API
+. You must configure the correct Base URL (
+https://hackathon.bitgetops.com/v1
+) as shown in the Qwen Setup Guide in Chapter 4. Alternatively, use your own Qwen account API Key.
+Q: How do I qualify for the Community Impact Award?
+Repost the Bitget
+official interaction post
+and publish your own content (project ideas, progress, Showcase, etc.) tagged
+#BitgetHackathon
+and @ the Bitget AI official account. Submit the post links with your project. Submitting a runnable Demo + qualifying post also earns the Participation Award (+50 USDT per team).
+Q: Will connecting Agent Hub with my own API Key trigger auto-trades?
+Currently only read access is supported — it syncs positions to a simulated account. Order execution is not fully implemented yet; no real-account trades will be triggered automatically.
+Q: What if I hit a technical issue?
+Join the
+official Telegram community
+— the technical team is online throughout for support.
+Bitget AI Base Camp is a long-term program. Hackathon S1 is the beginning, not the end. The Agent you build today may become part of the foundational infrastructure of the Agentic Trading era.
+Come build with us. — Bitget AI Team
+Last updated
+5 days ago
+1. The Event
+Prizes
+2. How to Participate
+Timeline (UTC+8)
+What You Need to Do
+3. Tracks, Submission & Judging
+Track Overview
+Submission Requirements
+Scoring Dimensions
+FAQ
+4. Hackathon Toolkit
+Bitget Playbook (Crypto & Stock AI Quant Copilot)
+Bitget Agent Hub
+(Crypto & Stocks Agent's Trading Arsenal)
+Qwen Token Credits
+MuleRun Token Credits
+Resources
+5. FAQ
+Copy
+1. Install getagent using https://www.npmjs.com/package/@bitget-ai/getagent-skill
+2. Use getagent to create a strategy playbook about [your idea], then upload, backtest, and publish it
+3. Once backtest succeeds, show me the key metrics in a table
+Strategy philosophy:
+[Describe your core logic, e.g. adaptive market regime — trend-following when trending, mean reversion when ranging, stay flat when unclear]
+playbook key: [your Playbook API Key]
+Copy
+npx bitget-hub upgrade-all --target claude
+Copy
+npx bitget-hub install --target codex
+npx bitget-hub install --target claude,codex
+Copy
+export BITGET_API_KEY="your-api-key"
+export BITGET_SECRET_KEY="your-secret-key"
+export BITGET_PASSPHRASE="your-passphrase"
+Copy
+claude mcp add -s user \
+--env BITGET_API_KEY=your-api-key \
+--env BITGET_SECRET_KEY=your-secret-key \
+--env BITGET_PASSPHRASE=your-passphrase \
+bitget \
+-- npx -y bitget-mcp-server
+Copy
+model = "qwen3.6-plus"
+model_provider = "bitget-qwen"
+[model_providers.bitget-qwen]
+name = "Bitget Qwen"
+base_url = "https://hackathon.bitgetops.com/v1"
+env_key = "BITGET_QWEN_API_KEY"
+wire_api = "responses"
+Copy
+## Do not write the key into config.toml. Run in Terminal:
+launchctl setenv BITGET_QWEN_API_KEY 'your real key'
+## Verify: output means the key is set.
+launchctl getenv BITGET_QWEN_API_KEY
+Copy
+https://hackathon.bitgetops.com/v1
