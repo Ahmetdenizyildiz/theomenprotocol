@@ -16,11 +16,10 @@ import base64
 import speech_recognition as sr
 from pydub import AudioSegment
 import re
-from pypdf import PdfReader
 from io import BytesIO
 from http_utils import fetch_url_text
 from market_trends import get_trending_coins
-from news_thief import start_thief_thread
+from news_scanner import start_news_scanner_thread
 def process_text_for_urls(text):
     if not text: return text
     url_pattern = re.compile(r'https?://\S+')
@@ -156,20 +155,52 @@ def handle_document_sniper(message):
         result = analyze_document_with_qwen(doc_text)
         process_sniper_result(message, result)
         
+@bot.message_handler(commands=['github'])
+def handle_github(message):
+    try:
+        parts = message.text.split(maxsplit=1)
+        if len(parts) < 2:
+            bot.reply_to(message, "⚠️ Lütfen bir repo girin. Örnek: `/github uniswap/v4-core`", parse_mode="Markdown")
+            return
+            
+        repo_target = parts[1].strip()
+        if "/" not in repo_target:
+            bot.reply_to(message, "⚠️ Lütfen geçerli bir Github Owner/Repo formatı girin. Örnek: `uniswap/v4-core`")
+            return
+            
+        owner, repo = repo_target.split("/", 1)
+        
+        bot.reply_to(message, f"🔍 *{owner}/{repo}* deposundaki son 24 saatlik gelişmeler ve yazılımcı aktiviteleri çekiliyor...", parse_mode="Markdown")
+        
+        github_data = scan_github_repo(owner, repo)
+        
+        if not github_data:
+            bot.reply_to(message, "❌ Bu repoda son 24 saatte kayda değer bir güncelleme (commit) bulunamadı veya repo geçersiz.")
+            return
+            
+        bot.reply_to(message, f"✅ *{github_data['new_commits']} yeni commit bulundu!* Qwen AI tarafından önem derecesi analiz ediliyor...", parse_mode="Markdown")
+        
+        # Analyze using existing function
+        qwen = analyze_with_qwen(github_data, {})
+        
+        if qwen:
+            decision = qwen.get("decision", "NEUTRAL")
+            confidence = qwen.get("confidence_score", 0)
+            impact = qwen.get("impact_score", 0)
+            reason = qwen.get("reason", "")
+            
+            msg = f"📊 *GITHUB OTONOM ANALİZ RAPORU*\n\n"
+            msg += f"📦 *Repo:* {owner}/{repo}\n"
+            msg += f"👨‍💻 *Yeni Commitler:* {github_data['new_commits']}\n"
+            msg += f"🔮 *Karar:* {decision} (Güven: {confidence}%, Etki: {impact}/10)\n\n"
+            msg += f"📝 *Özet:* {reason}\n"
+            
+            bot.reply_to(message, msg, parse_mode="Markdown")
+        else:
+            bot.reply_to(message, "❌ Qwen analizi sırasında bir hata oluştu.")
+            
     except Exception as e:
-        bot.send_message(message.chat.id, f"Document analysis failed: {e}")
-
-thief_started = False
-
-@bot.message_handler(commands=['start_thief'])
-def handle_start_thief(message):
-    global thief_started
-    if not thief_started:
-        start_thief_thread(bot, message.chat.id)
-        thief_started = True
-        bot.reply_to(message, "🥷 *Haber Hırsızı Aktif!* Artık dünya çapındaki haber sitelerini gizlice dinleyecek ve büyük bir fırsat (Etki >= 7) bulduğunda sana otomatik sinyal çakacak!", parse_mode="Markdown")
-    else:
-        bot.reply_to(message, "⚠️ Hırsız zaten arka planda çalışıyor.")
+        bot.reply_to(message, f"Hata: {e}")
 
 @bot.message_handler(commands=['trends'])
 def handle_trends(message):
@@ -510,5 +541,9 @@ if __name__ == "__main__":
     t = threading.Thread(target=background_scan_loop, daemon=True)
     t.start()
     
-    print("Telegram Bot listening...")
+    # Start automated news scanner thread for registered chats
+    registered_chats = get_chat_ids()
+    start_news_scanner_thread(bot, registered_chats)
+    
+    # Process commands and messages
     bot.infinity_polling()
