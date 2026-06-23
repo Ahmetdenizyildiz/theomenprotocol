@@ -154,15 +154,16 @@ def analyze_news_with_qwen(news_text, image_b64=None):
         )
         raw_content = completion.choices[0].message.content
         if raw_content:
-            raw_content = raw_content.strip()
-            if raw_content.startswith("```json"):
-                raw_content = raw_content[7:]
-            if raw_content.endswith("```"):
-                raw_content = raw_content[:-3]
-            raw_content = raw_content.strip()
-            
+            # En sağlam JSON çıkartma yöntemi (İlk '{' ve son '}' arasını al)
+            start_idx = raw_content.find('{')
+            end_idx = raw_content.rfind('}')
+            if start_idx != -1 and end_idx != -1:
+                json_str = raw_content[start_idx:end_idx+1]
+            else:
+                json_str = raw_content
+                
         try:
-            return json.loads(raw_content)
+            return json.loads(json_str)
         except Exception as json_e:
             return {"error": "JSON_DECODE_ERROR", "details": str(json_e), "raw": raw_content}
             
