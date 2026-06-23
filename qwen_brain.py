@@ -152,7 +152,8 @@ def analyze_news_with_qwen(news_text, image_b64=None):
             ],
             response_format={"type": "json_object"}
         )
-        raw_content = completion.choices[0].message.content
+        raw_content = completion.choices[0].message.content or ""
+        json_str = ""
         if raw_content:
             # En sağlam JSON çıkartma yöntemi (İlk '{' ve son '}' arasını al)
             start_idx = raw_content.find('{')
@@ -162,6 +163,9 @@ def analyze_news_with_qwen(news_text, image_b64=None):
             else:
                 json_str = raw_content
                 
+        if not json_str.strip():
+            return {"error": "EMPTY_RESPONSE", "details": "Qwen returned an empty response (probably timeout or API blockage).", "raw": raw_content}
+            
         try:
             return json.loads(json_str)
         except Exception as json_e:
