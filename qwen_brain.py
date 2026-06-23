@@ -144,8 +144,10 @@ def analyze_news_with_qwen(news_text, image_b64=None):
         user_content = f"BREAKING NEWS:\n{news_text}"
 
     try:
+        model_name = "qwen-vl-plus" if image_b64 else "qwen3.6-plus"
+        
         completion = client.chat.completions.create(
-            model="qwen3.6-plus",
+            model=model_name,
             messages=[
                 {'role': 'system', 'content': system_prompt},
                 {'role': 'user', 'content': user_content}
