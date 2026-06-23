@@ -222,10 +222,10 @@ def process_sniper_result(message, result):
         return
         
     if "error" in result:
-        error_msg = f"🚨 *[SİSTEM HATA MOTORU]*\n\n*Hata Türü:* {result['error']}\n*Detay:* {result['details']}"
+        error_msg = f"🚨 [SİSTEM HATA MOTORU]\n\nHata Türü: {result['error']}\nDetay: {result['details']}"
         if "raw" in result:
-            error_msg += f"\n\n*Qwen Ham Yanıtı (JSON Bozuk):*\n`{result['raw'][:500]}`"
-        bot.send_message(message.chat.id, error_msg, parse_mode="Markdown")
+            error_msg += f"\n\nQwen Ham Yanıtı (JSON Bozuk):\n{result['raw'][:500]}"
+        bot.send_message(message.chat.id, error_msg) # parse_mode yok, format çökmesin
         return
 
     if not result.get("affected_symbol"):
