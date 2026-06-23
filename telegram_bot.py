@@ -458,6 +458,21 @@ def background_scan_loop():
         time.sleep(600) # Sleep for 10 mins
 
 if __name__ == "__main__":
+    # Render Free Web Service Bypass (Dummy HTTP Server)
+    import http.server
+    import socketserver
+    def start_dummy_server():
+        port = int(os.environ.get("PORT", 8080))
+        Handler = http.server.SimpleHTTPRequestHandler
+        try:
+            with socketserver.TCPServer(("", port), Handler) as httpd:
+                print(f"Dummy Web Server running on port {port}")
+                httpd.serve_forever()
+        except Exception as e:
+            print("HTTP Server error:", e)
+
+    threading.Thread(target=start_dummy_server, daemon=True).start()
+
     # Start background loop as thread
     t = threading.Thread(target=background_scan_loop, daemon=True)
     t.start()
