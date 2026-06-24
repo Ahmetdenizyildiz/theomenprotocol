@@ -9,8 +9,10 @@ from market_monitor import check_market_anomalies
 from http_utils import get_session
 
 # Set up English logging to system_execution.log
+import os
+os.makedirs("logs", exist_ok=True)
 logging.basicConfig(
-    filename='system_execution.log',
+    filename='logs/system_execution.log',
     level=logging.INFO,
     format='[%(asctime)s] %(levelname)s: %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
@@ -78,9 +80,9 @@ def run_comprehensive_tests():
     github_result = scan_github_repo("Uniswap", "v4-core")
     if github_result:
         print_and_log(f"-> GitHub Fetch Successful. Latest commit SHA: {github_result['latest_sha']}")
-        print_and_log(f"-> Commit Message: {github_result['commit_message']}")
+        print_and_log(f"-> Commit Messages:\n{github_result['commit_messages']}")
         print_and_log("-> TELEGRAM BOT OUTPUT (Simulated):")
-        print_and_log(f"💻 *GITHUB UPDATE: Uniswap/v4-core*\n**Yazar:** {github_result['author']}\n**Commit:** {github_result['commit_message']}")
+        print_and_log(f"💻 *GITHUB UPDATE: Uniswap/v4-core*\n**Yeni Commit Sayısı:** {github_result['new_commits']}\n**Commitler:**\n{github_result['commit_messages']}")
     else:
         print_and_log("-> GitHub Fetch FAILED or Repo Not Found.")
 

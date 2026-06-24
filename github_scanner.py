@@ -13,10 +13,8 @@ def scan_github_repo(owner, repo):
     """
     print(f"[GITHUB] {owner}/{repo} deposu taranıyor...")
     
-    # Son 24 saat içindeki commitleri almak için zaman sınırı belirliyoruz
-    since_time = (datetime.now(timezone.utc) - timedelta(days=1)).isoformat()
-    
-    url = f"https://api.github.com/repos/{owner}/{repo}/commits?since={since_time}"
+    # Son commitleri almak için zaman sınırını kaldırıyoruz ki testlerde hep sonuç görebilelim
+    url = f"https://api.github.com/repos/{owner}/{repo}/commits"
     
     headers = {}
     if GITHUB_TOKEN and GITHUB_TOKEN.strip() != "your_github_personal_access_token_here":

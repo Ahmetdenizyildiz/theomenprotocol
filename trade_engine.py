@@ -100,7 +100,8 @@ def execute_paper_trade(symbol, usdt_amount):
     save_wallet(wallet)
     
     # Log the trade to CSV for Hackathon "Verifiable Usage Record" requirement
-    log_file = "trading_log.csv"
+    os.makedirs("logs", exist_ok=True)
+    log_file = "logs/trading_log.csv"
     file_exists = os.path.exists(log_file)
     with open(log_file, "a", newline="") as f:
         writer = csv.writer(f)

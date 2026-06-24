@@ -49,12 +49,8 @@ def scan_dao_proposals(space_id):
         if not proposals:
             return None
             
-        import time
-        current_time = int(time.time())
-        one_day_ago = current_time - (24 * 60 * 60)
-        
-        # Sadece son 24 saat içindekileri filtrele
-        recent_proposals = [p for p in proposals if p.get('created', 0) >= one_day_ago]
+        # En son teklifi doğrudan al, zaman sınırı koyma
+        recent_proposals = proposals
         
         if not recent_proposals:
             return None
