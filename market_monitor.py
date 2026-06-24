@@ -53,6 +53,10 @@ def check_market_anomalies(targets):
         current_tvl = llama_map.get(slug, 0)
         current_vol = binance_map.get(trade_symbol, 0)
         
+        # Ensure they are floats and not None
+        current_tvl = float(current_tvl) if current_tvl is not None else 0.0
+        current_vol = float(current_vol) if current_vol is not None else 0.0
+        
         current_data[trade_symbol] = {
             "tvl": current_tvl,
             "volume": current_vol
@@ -61,6 +65,9 @@ def check_market_anomalies(targets):
         if old_cache and trade_symbol in old_cache:
             old_tvl = old_cache[trade_symbol].get("tvl", 0)
             old_vol = old_cache[trade_symbol].get("volume", 0)
+            
+            old_tvl = float(old_tvl) if old_tvl is not None else 0.0
+            old_vol = float(old_vol) if old_vol is not None else 0.0
             
             # Check Bank Run (TVL Drop > 5%)
             if old_tvl > 0 and current_tvl > 0:

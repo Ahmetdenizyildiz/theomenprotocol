@@ -1,0 +1,52 @@
+[2026-06-24 21:15:44] INFO: ==================================================
+[2026-06-24 21:15:44] INFO: 🚀 OMEN PROTOCOL: COMPREHENSIVE SYSTEM TEST SUITE
+[2026-06-24 21:15:44] INFO: ==================================================
+[2026-06-24 21:15:44] INFO: 
+[TEST 1] AI News Sentiment Engine
+[2026-06-24 21:15:44] INFO: PURPOSE: To verify if the Qwen AI LLM can ingest breaking macroeconomic/crypto news, accurately assess its market impact, and generate a structured trade signal without crashing.
+[2026-06-24 21:15:44] INFO: -> Injecting test news: 'Mt. Gox to Start Bitcoin Repayments in July, Triggering Market Panic'
+[2026-06-24 21:17:00] INFO: HTTP Request: POST https://hackathon.bitgetops.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-06-24 21:17:02] INFO: -> AI Processing Successful. Extracted JSON: {
+  "affected_symbol": "BTCUSDT",
+  "project_name": "Bitcoin",
+  "decision": "BEARISH",
+  "impact_score": 6,
+  "confidence_score": 75,
+  "macro_analysis": "In an extreme fear macro environment (FGI 17), market liquidity is severely compressed and risk tolerance is near zero. The Mt. Gox distribution represents a predictable but massive exogenous supply shock (~$9B). Creditors hold BTC at a near-zero historical cost basis, creating an asymmetric incentive to immediately realize profits upon receipt. Under current macro conditions of tight global financial liquidity and risk-off positioning, this sudden influx will overwhelm fragmented spot bid walls, triggering algorithmic stop cascades and panic retail liquidations. Capital will aggressively rotate out of crypto into USD stablecoins (USDT/USDC) and cash equivalents, seeking capital preservation. While fundamentally idiosyncratic, the event acts as a volatility multiplier in a fragile market structure, draining depth and widening funding dislocations until institutional OTC buyers step in to absorb the supply at discounted valuations.",
+  "reason": "Massive dormant supply entering active circulation creates direct and immediate sell pressure. In an extreme fear market, traders and algorithms will front-run the July distribution, accelerating downside momentum and liquidating over-leveraged long positions before the actual transfers even hit public exchanges.",
+  "short_term": "Sharp downward volatility and liquidity sweeps expected. Initial wallet movements and creditor exchange listings will trigger panic selling and leverage flushes, likely breaking key short-term psychological supports as market makers hunt for liquidity to fill large sell orders.",
+  "medium_term": "Gradual price stabilization and volatility contraction. As the initial shock is absorbed by OTC desks, institutional buyers, and long-term accumulators, the market will consolidate. Short-term excesses will be flushed, establishing a higher-probability floor once the supply distribution velocity slows.",
+  "long_term": "Neutral to bullish. The elimination of the multi-year Mt. Gox overhang removes a persistent market headwind. Once the supply is fully digested and redistributed, historical fears will evaporate, clearing the structural path for renewed organic accumulation and healthier cycle progression.",
+  "playbook_strategy": {
+    "market_condition": "High-volatility risk-off phase with thin spot order book depth and extreme fear sentiment",
+    "trigger": "4-hour timeframe candle close below confirmed local swing low with expanding sell volume, confirmed after on-chain alerts of major Mt. Gox wallet movements hitting exchanges",
+    "risk_management": "Maximum 1.5% total account risk per position; isolated leverage capped at 2x to survive volatility wicks; position sizing strictly calculated using Average Daily Range (ADR) multipliers",
+    "exit_conditions": "Take-Profit: Scale out 50% at -7% from entry, 30% at -14% targeting historical liquidity voids, hold remainder for trailing exit. Stop-Loss: Hard stop at 2.5% above entry or above the breakdown candle high. Time/Event Exit: Close remaining exposure upon 72-hour sustained price action above post-event VWAP or confirmed OTC absorption signals from major liquidity providers."
+  }
+}
+[2026-06-24 21:17:02] INFO: -> AI determined impact score < 7. No automated alert triggered.
+[2026-06-24 21:17:02] INFO: 
+[TEST 2] GitHub Developer Activity Scanner
+[2026-06-24 21:17:02] INFO: PURPOSE: To verify the agent's ability to fetch the latest commits from a DeFi protocol's repository, providing early 'insider' alpha before major news breaks.
+[2026-06-24 21:17:02] INFO: -> Fetching latest commits for Uniswap/v4-core...
+[2026-06-24 21:17:05] INFO: -> GitHub Fetch FAILED or Repo Not Found.
+[2026-06-24 21:17:05] INFO: 
+[TEST 3] Snapshot DAO Proposal Scanner
+[2026-06-24 21:17:05] INFO: PURPOSE: To verify if the agent can track decentralized governance proposals, allowing traders to front-run protocol changes (like fee switches or treasury unlocks).
+[2026-06-24 21:17:05] INFO: -> Fetching latest DAO proposals for 'uniswap.eth'...
+[2026-06-24 21:17:06] INFO: -> DAO Fetch FAILED or Space Not Found.
+[2026-06-24 21:17:06] INFO: 
+[TEST 4] Binance Technical Indicator (15m RSI) Scanner
+[2026-06-24 21:17:06] INFO: PURPOSE: To verify the Signal Provider calculates RSI accurately using Live Binance Klines to detect 'Oversold' dip-buying opportunities.
+[2026-06-24 21:17:06] INFO: -> Fetching 15m Klines for BTCUSDT...
+[2026-06-24 21:17:13] INFO: -> RSI Calculation Successful. Current Price: 59659.99, 15m RSI: 23.17
+[2026-06-24 21:17:13] INFO: -> 🚨 ALGORITHMIC SIGNAL MET (RSI 23.17 < 25). Paper trade would execute.
+[2026-06-24 21:17:13] INFO: 
+[TEST 5] DefiLlama TVL Bank Run Detector
+[2026-06-24 21:17:13] INFO: PURPOSE: To verify the agent can track Total Value Locked across DeFi protocols to detect sudden liquidity drains or 'Bank Runs'.
+[2026-06-24 21:17:13] INFO: -> Checking TVL & Volume Anomalies for target: Aave...
+[2026-06-24 21:17:31] INFO: -> Anomaly Check Successful. Anomalies detected: 0
+[2026-06-24 21:17:31] INFO: 
+==================================================
+[2026-06-24 21:17:31] INFO: ✅ COMPREHENSIVE SYSTEM TEST SUITE COMPLETED
+[2026-06-24 21:17:31] INFO: ==================================================

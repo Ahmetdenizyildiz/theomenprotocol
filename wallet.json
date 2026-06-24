@@ -1,40 +1,404 @@
 {
-    "balance_usdt": 9300.0,
+    "balance_usdt": 50.0,
     "positions": [
         {
-            "symbol": "LDO/USDT",
-            "buy_price": 0.2839,
-            "amount": 352.23670306445933,
-            "usdt_invested": 100.0,
-            "timestamp": "2026-06-18T14:06:34.230900"
+            "symbol": "BTCUSDT",
+            "buy_price": 59454.52,
+            "amount": 0.016819579066486453,
+            "usdt_invested": 1000,
+            "timestamp": "2026-06-24T21:01:43.713267"
         },
         {
-            "symbol": "LDO/USDT",
-            "buy_price": 0.2803,
-            "amount": 356.76061362825544,
-            "usdt_invested": 100,
-            "timestamp": "2026-06-18T14:53:09.291793"
+            "symbol": "ETHUSDT",
+            "buy_price": 1562.51,
+            "amount": 0.3199979520131071,
+            "usdt_invested": 500,
+            "timestamp": "2026-06-24T21:01:46.117272"
         },
         {
-            "symbol": "TIAUSDT",
-            "buy_price": 0.3893,
-            "amount": 256.8713074749551,
+            "symbol": "SOLUSDT",
+            "buy_price": 65.04,
+            "amount": 3.8437884378843785,
+            "usdt_invested": 250,
+            "timestamp": "2026-06-24T21:01:48.878361"
+        },
+        {
+            "symbol": "BNBUSDT",
+            "buy_price": 549.6,
+            "amount": 0.5458515283842794,
+            "usdt_invested": 300,
+            "timestamp": "2026-06-24T21:01:51.560841"
+        },
+        {
+            "symbol": "AVAXUSDT",
+            "buy_price": 6.025,
+            "amount": 16.59751037344398,
             "usdt_invested": 100,
-            "timestamp": "2026-06-18T17:43:45.948819"
+            "timestamp": "2026-06-24T21:01:54.011456"
         },
         {
             "symbol": "BTCUSDT",
-            "buy_price": 63627.57,
-            "amount": 0.0031432915008383945,
-            "usdt_invested": 200.0,
-            "timestamp": "2026-06-18T18:05:29.818264"
+            "buy_price": 59525.44,
+            "amount": 0.0025199309740507585,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:08:40.880957"
         },
         {
-            "symbol": "PAXGUSDT",
-            "buy_price": 4156.92,
-            "amount": 0.048112544864948086,
-            "usdt_invested": 200.0,
-            "timestamp": "2026-06-19T13:03:25.629187"
+            "symbol": "ETHUSDT",
+            "buy_price": 1568.19,
+            "amount": 0.0956516748608268,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:08:41.787046"
+        },
+        {
+            "symbol": "SOLUSDT",
+            "buy_price": 65.25,
+            "amount": 2.2988505747126435,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:08:43.830314"
+        },
+        {
+            "symbol": "BNBUSDT",
+            "buy_price": 550.6,
+            "amount": 0.2724300762804214,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:08:44.961251"
+        },
+        {
+            "symbol": "AVAXUSDT",
+            "buy_price": 6.043,
+            "amount": 24.822108224391858,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:08:46.604479"
+        },
+        {
+            "symbol": "DOGEUSDT",
+            "buy_price": 0.07346,
+            "amount": 2041.9275796351756,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:08:47.531480"
+        },
+        {
+            "symbol": "BTCUSDT",
+            "buy_price": 59504.15,
+            "amount": 0.0025208325805847155,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:09:21.811115"
+        },
+        {
+            "symbol": "ETHUSDT",
+            "buy_price": 1567.25,
+            "amount": 0.0957090445047057,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:09:22.925970"
+        },
+        {
+            "symbol": "SOLUSDT",
+            "buy_price": 65.19,
+            "amount": 2.300966405890474,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:09:24.172469"
+        },
+        {
+            "symbol": "BNBUSDT",
+            "buy_price": 550.6,
+            "amount": 0.2724300762804214,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:09:25.509211"
+        },
+        {
+            "symbol": "AVAXUSDT",
+            "buy_price": 6.043,
+            "amount": 24.822108224391858,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:09:27.213672"
+        },
+        {
+            "symbol": "DOGEUSDT",
+            "buy_price": 0.07346,
+            "amount": 2041.9275796351756,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:09:28.687288"
+        },
+        {
+            "symbol": "BTCUSDT",
+            "buy_price": 59530.99,
+            "amount": 0.002519696044026817,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:10:03.808883"
+        },
+        {
+            "symbol": "ETHUSDT",
+            "buy_price": 1568.0,
+            "amount": 0.09566326530612244,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:10:05.151142"
+        },
+        {
+            "symbol": "SOLUSDT",
+            "buy_price": 65.26,
+            "amount": 2.2984983144345694,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:10:06.505649"
+        },
+        {
+            "symbol": "BNBUSDT",
+            "buy_price": 551.3,
+            "amount": 0.2720841647016144,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:10:07.623487"
+        },
+        {
+            "symbol": "AVAXUSDT",
+            "buy_price": 6.047,
+            "amount": 24.80568877129155,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:10:09.689704"
+        },
+        {
+            "symbol": "DOGEUSDT",
+            "buy_price": 0.07352,
+            "amount": 2040.2611534276386,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:10:11.022726"
+        },
+        {
+            "symbol": "BTCUSDT",
+            "buy_price": 59578.41,
+            "amount": 0.002517690552668324,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:10:44.805536"
+        },
+        {
+            "symbol": "ETHUSDT",
+            "buy_price": 1568.36,
+            "amount": 0.0956413068428167,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:10:45.624858"
+        },
+        {
+            "symbol": "SOLUSDT",
+            "buy_price": 65.35,
+            "amount": 2.295332823259373,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:10:46.960309"
+        },
+        {
+            "symbol": "BNBUSDT",
+            "buy_price": 551.7,
+            "amount": 0.2718868950516585,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:10:48.090936"
+        },
+        {
+            "symbol": "AVAXUSDT",
+            "buy_price": 6.056,
+            "amount": 24.76882430647292,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:10:49.635825"
+        },
+        {
+            "symbol": "DOGEUSDT",
+            "buy_price": 0.07354,
+            "amount": 2039.7062822953496,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:10:51.175392"
+        },
+        {
+            "symbol": "BTCUSDT",
+            "buy_price": 59591.99,
+            "amount": 0.002517116813853674,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:11:27.556950"
+        },
+        {
+            "symbol": "ETHUSDT",
+            "buy_price": 1567.82,
+            "amount": 0.09567424831932238,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:11:28.482143"
+        },
+        {
+            "symbol": "SOLUSDT",
+            "buy_price": 65.32,
+            "amount": 2.2963870177587267,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:11:29.812310"
+        },
+        {
+            "symbol": "BNBUSDT",
+            "buy_price": 551.5,
+            "amount": 0.271985494106981,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:11:31.557966"
+        },
+        {
+            "symbol": "AVAXUSDT",
+            "buy_price": 6.06,
+            "amount": 24.752475247524753,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:11:33.103298"
+        },
+        {
+            "symbol": "DOGEUSDT",
+            "buy_price": 0.07354,
+            "amount": 2039.7062822953496,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:11:34.225812"
+        },
+        {
+            "symbol": "BTCUSDT",
+            "buy_price": 59545.33,
+            "amount": 0.002519089238400392,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:12:08.791183"
+        },
+        {
+            "symbol": "ETHUSDT",
+            "buy_price": 1566.66,
+            "amount": 0.09574508827697138,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:12:10.132028"
+        },
+        {
+            "symbol": "SOLUSDT",
+            "buy_price": 65.28,
+            "amount": 2.297794117647059,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:12:11.366492"
+        },
+        {
+            "symbol": "BNBUSDT",
+            "buy_price": 551.1,
+            "amount": 0.2721829069134458,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:12:12.801593"
+        },
+        {
+            "symbol": "AVAXUSDT",
+            "buy_price": 6.063,
+            "amount": 24.740227610094013,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:12:14.396417"
+        },
+        {
+            "symbol": "DOGEUSDT",
+            "buy_price": 0.07345,
+            "amount": 2042.205582028591,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:12:15.782896"
+        },
+        {
+            "symbol": "BTCUSDT",
+            "buy_price": 59541.79,
+            "amount": 0.002519239008434244,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:12:49.455755"
+        },
+        {
+            "symbol": "ETHUSDT",
+            "buy_price": 1566.43,
+            "amount": 0.09575914659448555,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:12:50.615106"
+        },
+        {
+            "symbol": "SOLUSDT",
+            "buy_price": 65.32,
+            "amount": 2.2963870177587267,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:12:51.720677"
+        },
+        {
+            "symbol": "BNBUSDT",
+            "buy_price": 551.2,
+            "amount": 0.27213352685050796,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:12:52.748545"
+        },
+        {
+            "symbol": "AVAXUSDT",
+            "buy_price": 6.065,
+            "amount": 24.7320692497939,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:12:54.503482"
+        },
+        {
+            "symbol": "DOGEUSDT",
+            "buy_price": 0.07343,
+            "amount": 2042.761813972491,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:12:55.836043"
+        },
+        {
+            "symbol": "BTCUSDT",
+            "buy_price": 59559.19,
+            "amount": 0.002518503021951776,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:13:29.431441"
+        },
+        {
+            "symbol": "ETHUSDT",
+            "buy_price": 1567.36,
+            "amount": 0.09570232748060434,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:13:30.866103"
+        },
+        {
+            "symbol": "SOLUSDT",
+            "buy_price": 65.42,
+            "amount": 2.2928767960868237,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:13:32.308743"
+        },
+        {
+            "symbol": "BNBUSDT",
+            "buy_price": 551.5,
+            "amount": 0.271985494106981,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:13:33.447229"
+        },
+        {
+            "symbol": "AVAXUSDT",
+            "buy_price": 6.07,
+            "amount": 24.71169686985173,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:13:34.855523"
+        },
+        {
+            "symbol": "DOGEUSDT",
+            "buy_price": 0.07355,
+            "amount": 2039.4289598912303,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:13:36.108096"
+        },
+        {
+            "symbol": "BTCUSDT",
+            "buy_price": 59524.31,
+            "amount": 0.0025199788120181484,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:14:11.897641"
+        },
+        {
+            "symbol": "ETHUSDT",
+            "buy_price": 1566.2,
+            "amount": 0.09577320904099093,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:14:12.590260"
+        },
+        {
+            "symbol": "SOLUSDT",
+            "buy_price": 65.43,
+            "amount": 2.2925263640531863,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:14:13.958148"
+        },
+        {
+            "symbol": "BNBUSDT",
+            "buy_price": 551.5,
+            "amount": 0.271985494106981,
+            "usdt_invested": 150.0,
+            "timestamp": "2026-06-24T21:14:14.688390"
         }
     ]
 }
