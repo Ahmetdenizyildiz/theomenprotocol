@@ -66,11 +66,24 @@ Building Omen Protocol illuminated a profound shift: the future of Agentic Tradi
 **Your Answer:** 
 https://github.com/Ahmetdenizyildiz/theomenprotocol
 
-### 【Required】 Live trading record or paper trading log
-**Your Answer:** 
-*(Please provide the following two links which contain the required timestamp, pair, side, price, size, balance changes, and English system logs)*
-1. **Paper Trading Logs:** https://github.com/Ahmetdenizyildiz/theomenprotocol/blob/main/trading_log.csv
-2. **Comprehensive System Execution Logs (AI Reactions):** https://github.com/Ahmetdenizyildiz/theomenprotocol/blob/main/system_execution.log
+### Soru 6: Submission Links -> 【Required】 Live trading record or paper trading log
+*(Aşağıdaki tüm linkleri ve açıklamayı kopyalayın)*
+
+Here are the verifiable execution records demonstrating timestamp, pair, side, price, size, balance changes, and real-time AI decisions (verifying exactly what is stated in the Idea section):
+
+1. Paper Trading Logs (Execution Record):
+https://github.com/Ahmetdenizyildiz/theomenprotocol/blob/main/logs/trading_log.csv
+
+2. Comprehensive System Execution Logs (AI Reactions & Deep Verifications):
+https://github.com/Ahmetdenizyildiz/theomenprotocol/blob/main/logs/system_execution.log
+
+### Soru 7: Submission Links -> 【Optional】 Backtest report
+*(Bu opsiyonel soruya aşağıdaki açıklama ve linki kopyalayın)*
+
+To ensure absolute transparency, we developed a standalone historical backtester (`tests/backtest_engine.py`) that pulled the last 1000 15m Klines for BTCUSDT directly from the Binance API. It ran our exact 'Technical Exhaustion' strategy (RSI < 25) with our exact dynamic position sizing (25% portfolio risk) to validate its standalone effectiveness even without the Qwen AI macro filter.
+
+Historical Backtest Report (BTCUSDT, 15m, 1000 Candles):
+https://github.com/Ahmetdenizyildiz/theomenprotocol/blob/main/docs/backtest_report.md
 
 ### 【Optional】 Demo video (≤3 min)
 **Your Answer:** 
