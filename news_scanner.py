@@ -10,10 +10,11 @@ RSS_FEEDS = [
 
 SEEN_URLS = set()
 
-def scan_rss_feeds(bot, chat_ids):
+def scan_rss_feeds(bot, get_chat_ids_func):
     """
     Scans RSS feeds for breaking news. If a new item is found, it sends it to Qwen.
     If Qwen determines it's a huge catalyst (impact_score >= 7), it alerts the Telegram chats.
+    If Qwen API fails, it still sends a fallback alert to ensure news is not missed.
     """
     print("[NEWS SCANNER] Background market scanner started...")
     
@@ -37,6 +38,9 @@ def scan_rss_feeds(bot, chat_ids):
                         
                         result = analyze_news_with_qwen(text_to_analyze)
                         
+                        # Güncel chat id'lerini al (Botu her başlatanlar için dinamik)
+                        current_chat_ids = get_chat_ids_func()
+                        
                         if result and not result.get("error"):
                             impact = result.get("impact_score", 0)
                             
@@ -55,18 +59,32 @@ def scan_rss_feeds(bot, chat_ids):
                                     f"💡 *Gerekçe:* {reason}\n\n"
                                     f"🔗 [Kaynağa Git]({url})"
                                 )
-                                for cid in chat_ids:
+                                for cid in current_chat_ids:
                                     try:
                                         bot.send_message(cid, alert_msg, parse_mode="Markdown")
                                     except:
                                         pass
+                        else:
+                            # QWEN ÇÖKTÜYSE (FALLBACK)
+                            print("[NEWS SCANNER] Qwen API yanıt vermedi. Fallback (Acil Durum) bildirimi atılıyor.")
+                            fallback_msg = (
+                                f"📡 *[PİYASA CANLI HABER AĞI]* 📡\n\n"
+                                f"Yeni bir haber düştü (AI Analizi Yapılamadı - Sunucu Yoğunluğu):\n"
+                                f"📰 *Haber:* {title}\n\n"
+                                f"🔗 [Kaynağa Git]({url})"
+                            )
+                            for cid in current_chat_ids:
+                                try:
+                                    bot.send_message(cid, fallback_msg, parse_mode="Markdown")
+                                except:
+                                    pass
                                 
         except Exception as e:
             print(f"[NEWS SCANNER] Hata: {e}")
             
         time.sleep(60) # Her 60 saniyede bir tarama yap
 
-def start_news_scanner_thread(bot, chat_ids):
-    thread = threading.Thread(target=scan_rss_feeds, args=(bot, chat_ids), daemon=True)
+def start_news_scanner_thread(bot, get_chat_ids_func):
+    thread = threading.Thread(target=scan_rss_feeds, args=(bot, get_chat_ids_func), daemon=True)
     thread.start()
     return thread

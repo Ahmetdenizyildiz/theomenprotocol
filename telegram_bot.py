@@ -20,6 +20,7 @@ from io import BytesIO
 from http_utils import fetch_url_text
 from market_trends import get_trending_coins
 from news_scanner import start_news_scanner_thread
+from signal_provider import start_signal_provider_thread
 def process_text_for_urls(text):
     if not text: return text
     url_pattern = re.compile(r'https?://\S+')
@@ -544,8 +545,10 @@ if __name__ == "__main__":
     t.start()
     
     # Start automated news scanner thread for registered chats
-    registered_chats = get_chat_ids()
-    start_news_scanner_thread(bot, registered_chats)
+    start_news_scanner_thread(bot, get_chat_ids)
+    
+    # Start algorithmic signal provider (Binance RSI)
+    start_signal_provider_thread(bot, get_chat_ids)
     
     # Process commands and messages
     bot.infinity_polling()
