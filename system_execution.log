@@ -50,3 +50,132 @@
 ==================================================
 [2026-06-24 21:17:31] INFO: ✅ COMPREHENSIVE SYSTEM TEST SUITE COMPLETED
 [2026-06-24 21:17:31] INFO: ==================================================
+[2026-06-24 21:23:51] INFO: ==================================================
+[2026-06-24 21:23:51] INFO: 🚀 OMEN PROTOCOL: COMPREHENSIVE SYSTEM TEST SUITE
+[2026-06-24 21:23:51] INFO: ==================================================
+[2026-06-24 21:23:51] INFO: 
+[TEST 1] AI News Sentiment Engine
+[2026-06-24 21:23:51] INFO: PURPOSE: To verify if the Qwen AI LLM can ingest breaking macroeconomic/crypto news, accurately assess its market impact, and generate a structured trade signal without crashing.
+[2026-06-24 21:23:51] INFO: -> Injecting test news: 'Mt. Gox to Start Bitcoin Repayments in July, Triggering Market Panic'
+[2026-06-24 21:24:51] INFO: HTTP Request: POST https://hackathon.bitgetops.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-06-24 21:24:51] INFO: -> AI Processing Successful. Extracted JSON: {
+  "affected_symbol": "BTCUSDT",
+  "project_name": "Bitcoin",
+  "decision": "BEARISH",
+  "impact_score": 5,
+  "confidence_score": 78,
+  "macro_analysis": "In a macro environment defined by restrictive central bank liquidity conditions and an Extreme Fear sentiment (F&G Index at 17), crypto markets operate with thin order books and high sensitivity to known supply overhangs. The Mt. Gox distribution injects ~142,000 BTC into circulation. While not all creditors will liquidate instantly, the psychological weight combined with potential profit-taking in a risk-off climate will likely trigger liquidity cascades. Capital will rotate out of high-beta digital assets into stablecoins and fiat, awaiting clearer confirmation that the supply shock is fully absorbed. This reflects a classic supply-overhang dynamic exacerbated by fragile market psychology.",
+  "reason": "Direct introduction of billions in BTC supply into a fear-driven, low-liquidity environment amplifies downside volatility as long-dormant creditors realize profits and weak hands capitulate ahead of and during distribution.",
+  "short_term": "Immediate sell pressure and heightened volatility expected in early July; BTC likely tests lower support levels as the market aggressively prices in the distribution wave.",
+  "medium_term": "Gradual absorption by institutional OTC desks, market makers, and long-term accumulators; volatility contracts as supply clears and price enters a consolidation/range-bound phase.",
+  "long_term": "Neutral to bullish; removal of the decade-old Mt. Gox overhang eliminates a major structural uncertainty, paving the way for healthier, organic demand-driven price discovery once the supply shock is fully digested.",
+  "playbook_strategy": {
+    "market_condition": "Extreme Fear / Supply Shock / Low Liquidity",
+    "trigger": "Enter short or shift to stablecoins on confirmed daily close below recent swing-low support accompanied by above-average volume, or fade any short-lived post-news bullish wicks.",
+    "risk_management": "Allocate max 2-3% of portfolio risk; scale entries over 2-3 levels to mitigate liquidity wicks; avoid over-leverage due to potential short squeezes from market makers.",
+    "exit_conditions": "Take Profit 1: -5% from entry at nearest liquidity pocket. Take Profit 2: -10% at major psychological/historical support. Stop Loss: +3.5% above entry to invalidate bearish thesis and prevent squeeze damage."
+  }
+}
+[2026-06-24 21:24:51] INFO: -> AI determined impact score < 7. No automated alert triggered.
+[2026-06-24 21:24:51] INFO: 
+[TEST 2] GitHub Developer Activity Scanner
+[2026-06-24 21:24:51] INFO: PURPOSE: To verify the agent's ability to fetch the latest commits from a DeFi protocol's repository, providing early 'insider' alpha before major news breaks.
+[2026-06-24 21:24:51] INFO: -> Fetching latest commits for Uniswap/v4-core...
+[2026-06-24 21:24:53] INFO: -> GitHub Fetch Successful. Latest commit SHA: 46c6834698c48bc4a463a86d8420f4eb1d7f3b75
+[2026-06-24 21:25:10] INFO: ==================================================
+[2026-06-24 21:25:10] INFO: 🚀 OMEN PROTOCOL: COMPREHENSIVE SYSTEM TEST SUITE
+[2026-06-24 21:25:10] INFO: ==================================================
+[2026-06-24 21:25:10] INFO: 
+[TEST 1] AI News Sentiment Engine
+[2026-06-24 21:25:10] INFO: PURPOSE: To verify if the Qwen AI LLM can ingest breaking macroeconomic/crypto news, accurately assess its market impact, and generate a structured trade signal without crashing.
+[2026-06-24 21:25:10] INFO: -> Injecting test news: 'Mt. Gox to Start Bitcoin Repayments in July, Triggering Market Panic'
+[2026-06-24 21:26:23] INFO: HTTP Request: POST https://hackathon.bitgetops.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-06-24 21:26:23] INFO: -> AI Processing Successful. Extracted JSON: {
+  "affected_symbol": "BTCUSDT",
+  "project_name": "Bitcoin",
+  "decision": "BEARISH",
+  "impact_score": 7,
+  "confidence_score": 78,
+  "macro_analysis": "The initiation of Mt. Gox repayments represents a direct, multi-billion dollar supply overhang hitting a market already in Extreme Fear (Index 17). Historically, creditors liquidate a significant portion of recovered BTC to cover fiat-equivalent losses or realize gains. In a risk-off, low-liquidity environment, this acts as a structural supply catalyst rather than a fundamental value driver. Capital is actively fleeing to stablecoins and traditional safe havens, suppressing spot depth. While not a macroeconomic or geopolitical shock, crypto market microstructure magnifies sell-side pressure during fear cycles. The event forces a liquidity stress test; institutional ETF bids must absorb creditor distribution, otherwise a downside spiral becomes likely. Short-term dynamics will be dictated by execution pacing and leverage deleveraging.",
+  "reason": "Direct, time-locked supply influx coinciding with Extreme Fear creates asymmetric downside risk. Historical creditor behavior shows 40-60% immediate sell-off rates, and current sentiment amplifies panic, funding rate resets, and liquidation cascades.",
+  "short_term": "Pre-distribution selling and post-distribution supply hits will likely breach near-term supports. Expect elevated volatility, funding rate flips, and potential cascade liquidations into early July.",
+  "medium_term": "Market enters consolidation as repayments are absorbed. Price action hinges on Spot ETF inflows and macro liquidity. Likely range-bound or gradual recovery if fear normalizes above 30.",
+  "long_term": "Neutral-to-bullish. Removal of a multi-year psychological overhang allows dormant supply to re-enter circulation, clearing structural uncertainty for institutional adoption and fundamental-driven price discovery.",
+  "playbook_strategy": {
+    "market_condition": "Risk-off, extreme fear, declining spot liquidity, elevated derivative leverage risk",
+    "trigger": "Confirmed 4H close below active consolidation support with expanding volume, signaling institutional/creditor distribution has overcome buy-side absorption",
+    "risk_management": "Position size max 1.5% of portfolio capital. Use isolated margin if trading perps. Avoid chasing breakdowns; wait for pullback/retest for entry. Maintain 3:1 risk-reward minimum.",
+    "exit_conditions": "Take Profit 1 at 4-6% downside, TP2 at 8-10% or major historical support zone. Hard Stop Loss 2.5% above trigger breakdown high. Trail stop if volume accelerates. Full exit if market structure shifts bullish (higher lows form, Fear & Greed recovers above 30, or volume dries up on downside)."
+  }
+}
+[2026-06-24 21:26:23] INFO: -> TELEGRAM BOT OUTPUT (Simulated):
+🚨 *[OTOMATİK PİYASA UYARISI]* 🚨
+
+Yüksek etkili yeni bir haber tespit edildi!
+📰 *Haber:* Mt. Gox to Start Bitcoin Repayments in July, Triggering Market Panic
+🎯 *Etkilenen Varlık:* BTCUSDT (BEARISH)
+🔥 *Etki Puanı:* 7/10
+
+💡 *Gerekçe:* Direct, time-locked supply influx coinciding with Extreme Fear creates asymmetric downside risk. Historical creditor behavior shows 40-60% immediate sell-off rates, and current sentiment amplifies panic, funding rate resets, and liquidation cascades.
+
+🔗 [Kaynağa Git](https://www.coindesk.com/mt-gox-repayments)
+[2026-06-24 21:26:23] INFO: 
+[TEST 2] GitHub Developer Activity Scanner
+[2026-06-24 21:26:23] INFO: PURPOSE: To verify the agent's ability to fetch the latest commits from a DeFi protocol's repository, providing early 'insider' alpha before major news breaks.
+[2026-06-24 21:26:23] INFO: -> Fetching latest commits for Uniswap/v4-core...
+[2026-06-24 21:26:24] INFO: -> GitHub Fetch Successful. Latest commit SHA: 46c6834698c48bc4a463a86d8420f4eb1d7f3b75
+[2026-06-24 21:26:24] INFO: -> Commit Messages:
+- Merge pull request #1034 from Uniswap/fix/ci-sha-pin-github-actions
+
+fix: pin all GitHub Actions to commit SHAs
+- fix: pin all GitHub Actions to commit SHAs
+
+Pin actions/checkout@v5 to its commit SHA in tests-merge.yml to prevent
+supply chain attacks via mutable tags. All other actions in this repo
+were already SHA-pinned.
+
+Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>
+- Merge pull request #989 from Uniswap/dgilman/add-trusted-publishing
+
+chore(ci): Add trusted publishing
+- Fix prettier
+- Foundry 1.3.6
+[2026-06-24 21:26:24] INFO: -> TELEGRAM BOT OUTPUT (Simulated):
+[2026-06-24 21:26:24] INFO: 💻 *GITHUB UPDATE: Uniswap/v4-core*
+**Yeni Commit Sayısı:** 30
+**Commitler:**
+- Merge pull request #1034 from Uniswap/fix/ci-sha-pin-github-actions
+
+fix: pin all GitHub Actions to commit SHAs
+- fix: pin all GitHub Actions to commit SHAs
+
+Pin actions/checkout@v5 to its commit SHA in tests-merge.yml to prevent
+supply chain attacks via mutable tags. All other actions in this repo
+were already SHA-pinned.
+
+Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>
+- Merge pull request #989 from Uniswap/dgilman/add-trusted-publishing
+
+chore(ci): Add trusted publishing
+- Fix prettier
+- Foundry 1.3.6
+[2026-06-24 21:26:24] INFO: 
+[TEST 3] Snapshot DAO Proposal Scanner
+[2026-06-24 21:26:24] INFO: PURPOSE: To verify if the agent can track decentralized governance proposals, allowing traders to front-run protocol changes (like fee switches or treasury unlocks).
+[2026-06-24 21:26:24] INFO: -> Fetching latest DAO proposals for 'uniswap.eth'...
+[2026-06-24 21:26:27] INFO: -> DAO Fetch FAILED or Space Not Found.
+[2026-06-24 21:26:27] INFO: 
+[TEST 4] Binance Technical Indicator (15m RSI) Scanner
+[2026-06-24 21:26:27] INFO: PURPOSE: To verify the Signal Provider calculates RSI accurately using Live Binance Klines to detect 'Oversold' dip-buying opportunities.
+[2026-06-24 21:26:27] INFO: -> Fetching 15m Klines for BTCUSDT...
+[2026-06-24 21:26:28] INFO: -> RSI Calculation Successful. Current Price: 59789.19, 15m RSI: 26.67
+[2026-06-24 21:26:28] INFO: -> No oversold condition met (RSI 26.67 >= 25).
+[2026-06-24 21:26:28] INFO: 
+[TEST 5] DefiLlama TVL Bank Run Detector
+[2026-06-24 21:26:28] INFO: PURPOSE: To verify the agent can track Total Value Locked across DeFi protocols to detect sudden liquidity drains or 'Bank Runs'.
+[2026-06-24 21:26:28] INFO: -> Checking TVL & Volume Anomalies for target: Aave...
+[2026-06-24 21:26:31] INFO: -> Anomaly Check Successful. Anomalies detected: 0
+[2026-06-24 21:26:31] INFO: 
+==================================================
+[2026-06-24 21:26:31] INFO: ✅ COMPREHENSIVE SYSTEM TEST SUITE COMPLETED
+[2026-06-24 21:26:31] INFO: ==================================================
